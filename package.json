@@ -2,6 +2,7 @@
   "name": "candle-engine",
   "private": true,
   "version": "0.0.0",
+  "description": "Motor gráfico financiero de velas en AssemblyScript WASM SIMD sin asignaciones dinámicas, con Arena estática (< 1 MiB), wrapper TypeScript zero-copy, renderizadores WebGL2/Canvas2D, streams reales de Binance a 4 Hz y playground modular en SolidJS.",
   "author": "Edison Manrique Chocce",
   "type": "module",
   "scripts": {

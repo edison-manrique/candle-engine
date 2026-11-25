@@ -136,7 +136,8 @@ export function App() {
 
   onMount(async () => {
     try {
-      const wrapper = await CandleEngineWrapper.create("/wasm/candle-engine.wasm");
+      const wasmUrl = `${import.meta.env.BASE_URL}wasm/candle-engine.wasm`;
+      const wrapper = await CandleEngineWrapper.create(wasmUrl);
       setEngine(wrapper);
       setDiagnostics(wrapper.getMemoryDiagnostics());
     } catch (err) {

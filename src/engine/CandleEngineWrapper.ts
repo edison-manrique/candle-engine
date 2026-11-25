@@ -217,7 +217,9 @@ export class CandleEngineWrapper {
     };
   }
 
-  static async create(wasmUrl = "/wasm/candle-engine.wasm"): Promise<CandleEngineWrapper> {
+  static async create(
+    wasmUrl = `${(import.meta as { env?: { BASE_URL?: string } }).env?.BASE_URL ?? "/"}wasm/candle-engine.wasm`
+  ): Promise<CandleEngineWrapper> {
     const imports: WebAssembly.Imports = {
       env: {
         abort: (msg: number, file: number, line: number, col: number) => {
