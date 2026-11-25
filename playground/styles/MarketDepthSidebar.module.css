@@ -1,0 +1,217 @@
+.sidebar {
+  width: var(--sidebar-width);
+  border-left: 1px solid var(--border-default);
+  background-color: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header {
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.depthControls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stepBtn {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 4px;
+  background-color: var(--bg-control);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.stepBtn:hover:not(:disabled) {
+  background-color: var(--bg-control-active);
+  color: var(--text-primary);
+}
+
+.stepBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.tickVal {
+  min-width: 44px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  color: var(--accent-sky);
+}
+
+.spreadMeta {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.bookSection {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.cols3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 0 4px 6px;
+}
+
+.cols4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 0 4px 4px;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.emptyState {
+  padding: 36px 0;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+
+.depthRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 2px 4px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.depthFillAsk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--bear-bg);
+  pointer-events: none;
+}
+
+.depthFillBid {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--bull-bg);
+  pointer-events: none;
+}
+
+.rel {
+  position: relative;
+}
+
+.midBar {
+  margin: 6px 0;
+  padding: 4px;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.midPrice {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.midSpread {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.tradesSection {
+  padding: 6px 12px 8px;
+  flex: 1 1 0%;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.tradeRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.tradeRow:hover {
+  background-color: rgba(15, 23, 42, 0.7);
+}
+
+.askPrice {
+  color: var(--bear);
+}
+
+.bidPrice {
+  color: var(--bull);
+}
+
+.qtyText {
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.totalText {
+  text-align: right;
+  color: var(--text-muted);
+}
+
+.timeText {
+  text-align: right;
+  color: var(--text-dim);
+}

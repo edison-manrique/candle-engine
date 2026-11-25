@@ -1,0 +1,26 @@
+{
+  "entries": ["assembly/index.ts"],
+  "targets": {
+    "release": {
+      "outFile": "public/wasm/candle-engine.wasm",
+      "textFile": "public/wasm/candle-engine.wat",
+      "optimizeLevel": 3,
+      "shrinkLevel": 0,
+      "converge": true,
+      "noAssert": true
+    },
+    "debug": {
+      "outFile": "public/wasm/candle-engine.debug.wasm",
+      "textFile": "public/wasm/candle-engine.debug.wat",
+      "sourceMap": true,
+      "debug": true
+    }
+  },
+  "options": {
+    "enable": ["simd"],
+    "runtime": "stub",
+    "initialMemory": 16,
+    "maximumMemory": 16,
+    "exportRuntime": false
+  }
+}

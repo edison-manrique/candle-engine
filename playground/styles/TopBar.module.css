@@ -1,0 +1,102 @@
+.header {
+  height: 52px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  border-bottom: 1px solid var(--border-default);
+  background-color: var(--bg-surface);
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  overflow-x: auto;
+}
+
+.pairBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  font-size: 13px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 140ms ease, border-color 140ms ease;
+}
+
+.pairBtn:hover {
+  color: var(--text-secondary);
+}
+
+.pairBtn:focus-visible {
+  outline: 2px solid var(--accent-sky);
+  outline-offset: 2px;
+}
+
+.pairBtnActive {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-sky);
+}
+
+.pairPrice {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 11px;
+}
+
+.bull {
+  color: var(--bull);
+}
+
+.bear {
+  color: var(--bear);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.resetBtn {
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-sky-btn);
+  color: #020617;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 140ms ease;
+}
+
+.resetBtn:hover {
+  background-color: var(--accent-sky-btn-hover);
+}
+
+.resetBtn:focus-visible {
+  outline: 2px solid #7dd3fc;
+  outline-offset: 2px;
+}

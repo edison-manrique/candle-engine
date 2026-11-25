@@ -1,0 +1,6 @@
+{
+  "name": "KandelCore",
+  "description": "Zero-allocation AssemblyScript SIMD candlestick graphics engine with TypeScript Arena wrapper, WebGL2 instanced renderer, and modular SolidJS crypto playground.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

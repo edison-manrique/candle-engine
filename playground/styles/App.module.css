@@ -1,0 +1,46 @@
+.shell {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--bg-canvas);
+  color: var(--text-secondary);
+}
+
+.workspace {
+  flex: 1 1 0%;
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.errorWrap {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.errorBox {
+  max-width: 448px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(127, 29, 29, 0.65);
+  background-color: rgba(69, 10, 10, 0.25);
+  font-size: 14px;
+  color: #fecaca;
+}
+
+.errorTitle {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.errorMsg {
+  margin: 0;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: rgba(252, 165, 165, 0.9);
+}

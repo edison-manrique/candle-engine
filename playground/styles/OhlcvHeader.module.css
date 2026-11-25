@@ -1,0 +1,101 @@
+.bar {
+  height: 34px;
+  min-height: 34px;
+  max-height: 34px;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-canvas);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.left {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pairTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+.sep {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.tf {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.val {
+  color: var(--text-secondary);
+}
+
+.bull {
+  color: var(--bull);
+}
+
+.bear {
+  color: var(--bear);
+}
+
+.pattern {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: #fcd34d;
+  flex-shrink: 0;
+}
+
+.right {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.emaItem {
+  flex-shrink: 0;
+}
+
+.bbVal {
+  color: var(--accent-purple);
+}

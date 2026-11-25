@@ -1,0 +1,73 @@
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg-canvas: #090d14;
+  --bg-surface: #0b1019;
+  --bg-toolbar: #0d131e;
+  --bg-elevated: #111827;
+  --bg-control: #0f172a;
+  --bg-control-active: #1e293b;
+  --bg-control-hover: #334155;
+
+  /* Borders */
+  --border-subtle: rgba(30, 41, 59, 0.72);
+  --border-default: rgba(30, 41, 59, 0.92);
+  --border-strong: rgba(51, 65, 85, 0.9);
+
+  /* Text */
+  --text-primary: #f8fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Semantic & Accent */
+  --accent-sky: #38bdf8;
+  --accent-sky-btn: #0ea5e9;
+  --accent-sky-btn-hover: #38bdf8;
+  --accent-amber: #fbbf24;
+  --accent-purple: #c084fc;
+  --accent-violet: #a78bfa;
+  --accent-indigo: #818cf8;
+  --accent-cyan: #22d3ee;
+
+  --bull: #34d399;
+  --bull-solid: #10b981;
+  --bull-bg: rgba(16, 185, 129, 0.13);
+  --bear: #f87171;
+  --bear-solid: #ef4444;
+  --bear-bg: rgba(239, 68, 68, 0.13);
+
+  /* Typography */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Layout */
+  --sidebar-width: 336px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-canvas);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+}
