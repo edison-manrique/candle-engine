@@ -1,27 +1,80 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>candle-engine — AssemblyScript Candlestick Engine</title>
-    <meta name="author" content="Edison Manrique Chocce" />
+    <title>candle-engine — Motor Gráfico Crypto WASM SIMD</title>
     <meta
       name="description"
-      content="Zero-allocation AssemblyScript SIMD candlestick graphics engine with TypeScript Arena wrapper, WebGL2 instanced renderer, and modular SolidJS crypto playground."
+      content="Visualiza velas crypto en tiempo real con AssemblyScript WASM SIMD, Arena zero-alloc, WebGL2, 4 EMAs, RSI y Order Book de Binance a 4 Hz."
     />
-    <meta property="og:title" content="candle-engine — AssemblyScript Candlestick Engine" />
+    <meta
+      name="keywords"
+      content="candle-engine, AssemblyScript, WebAssembly, SIMD, candlestick chart, WebGL2, SolidJS, Binance WebSocket, trading terminal, crypto"
+    />
+    <meta name="author" content="Edison Manrique Chocce" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0B0E11" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="canonical" href="" id="canonical-link" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="candle-engine" />
+    <meta property="og:title" content="candle-engine — Motor Gráfico Crypto WASM SIMD" />
     <meta
       property="og:description"
-      content="Zero-allocation AssemblyScript SIMD candlestick graphics engine with TypeScript Arena wrapper, WebGL2 instanced renderer, and modular SolidJS crypto playground."
+      content="Visualiza velas crypto en tiempo real con AssemblyScript WASM SIMD, Arena zero-alloc, WebGL2, 4 EMAs, RSI y Order Book de Binance a 4 Hz."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./favicon.svg" />
+
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="candle-engine — Motor Gráfico Crypto WASM SIMD" />
+    <meta
+      name="twitter:description"
+      content="Visualiza velas crypto en tiempo real con AssemblyScript WASM SIMD, Arena zero-alloc, WebGL2, 4 EMAs, RSI y Order Book de Binance a 4 Hz."
+    />
+
+    <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <script>
+      (function () {
+        var canonical = document.getElementById("canonical-link");
+        if (canonical) {
+          canonical.setAttribute("href", window.location.origin + window.location.pathname);
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "candle-engine",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "inLanguage": "es",
+        "description": "Motor gráfico financiero de velas en AssemblyScript WASM SIMD sin asignaciones dinámicas, con Arena estática (< 1 MiB), renderizado WebGL2/Canvas2D y datos en vivo de Binance a 4 Hz.",
+        "author": {
+          "@type": "Person",
+          "name": "Edison Manrique Chocce"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

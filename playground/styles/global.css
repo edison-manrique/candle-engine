@@ -1,55 +1,78 @@
 :root {
   color-scheme: dark;
 
-  /* Surfaces */
-  --bg-canvas: #090d14;
-  --bg-surface: #0b1019;
-  --bg-toolbar: #0d131e;
-  --bg-elevated: #111827;
-  --bg-control: #0f172a;
-  --bg-control-active: #1e293b;
-  --bg-control-hover: #334155;
+  /* Binance Pro Surfaces */
+  --bg-canvas: #0b0e11;
+  --bg-surface: #181a20;
+  --bg-toolbar: #161a1e;
+  --bg-elevated: #1e2329;
+  --bg-control: #1e2329;
+  --bg-control-active: #2b3139;
+  --bg-control-hover: #363d47;
 
   /* Borders */
-  --border-subtle: rgba(30, 41, 59, 0.72);
-  --border-default: rgba(30, 41, 59, 0.92);
-  --border-strong: rgba(51, 65, 85, 0.9);
+  --border-subtle: rgba(43, 49, 57, 0.65);
+  --border-default: #2b3139;
+  --border-strong: #474d57;
 
   /* Text */
-  --text-primary: #f8fafc;
-  --text-secondary: #e2e8f0;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  --text-primary: #eaecef;
+  --text-secondary: #cfd6de;
+  --text-muted: #848e9c;
+  --text-dim: #5e6673;
 
   /* Semantic & Accent */
+  --accent-binance: #f0b90b;
+  --accent-binance-hover: #fcd535;
+  --accent-binance-bg: rgba(240, 185, 11, 0.14);
   --accent-sky: #38bdf8;
-  --accent-sky-btn: #0ea5e9;
-  --accent-sky-btn-hover: #38bdf8;
-  --accent-amber: #fbbf24;
+  --accent-sky-btn: #f0b90b;
+  --accent-sky-btn-hover: #fcd535;
+  --accent-amber: #f0b90b;
   --accent-purple: #c084fc;
   --accent-violet: #a78bfa;
   --accent-indigo: #818cf8;
   --accent-cyan: #22d3ee;
 
-  --bull: #34d399;
-  --bull-solid: #10b981;
-  --bull-bg: rgba(16, 185, 129, 0.13);
-  --bear: #f87171;
-  --bear-solid: #ef4444;
-  --bear-bg: rgba(239, 68, 68, 0.13);
+  --bull: #0ecb81;
+  --bull-solid: #0ecb81;
+  --bull-bg: rgba(14, 203, 129, 0.14);
+  --bear: #f6465d;
+  --bear-solid: #f6465d;
+  --bear-bg: rgba(246, 70, 93, 0.14);
 
   /* Typography */
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Layout */
-  --sidebar-width: 336px;
+  --sidebar-width: 316px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #2b3139 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2b3139;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #474d57;
 }
 
 html,

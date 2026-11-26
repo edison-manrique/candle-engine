@@ -1,12 +1,13 @@
 .toolbar {
-  padding: 8px 20px;
-  border-bottom: 1px solid var(--border-subtle);
+  padding: 5px 16px;
+  min-height: 38px;
+  border-bottom: 1px solid var(--border-default);
   background-color: var(--bg-toolbar);
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 8px;
   flex-shrink: 0;
   position: relative;
   z-index: 20;
@@ -15,8 +16,9 @@
 .group {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-width: 0;
 }
 
 .segmented {
@@ -27,11 +29,12 @@
   border-radius: 6px;
   background-color: var(--bg-control);
   border: 1px solid var(--border-default);
+  flex-shrink: 0;
 }
 
 .segBtn {
-  padding: 4px 10px;
-  font-size: 12px;
+  padding: 3px 7px;
+  font-size: 11px;
   font-weight: 500;
   border: none;
   border-radius: 4px;
@@ -44,7 +47,7 @@
 }
 
 .segBtn:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .segBtnMono {
@@ -54,7 +57,7 @@
 
 .segBtnActive {
   background-color: var(--bg-control-active);
-  color: var(--text-primary);
+  color: var(--accent-binance);
   font-weight: 600;
 }
 
@@ -62,22 +65,23 @@
   width: 1px;
   height: 16px;
   background-color: var(--border-default);
+  flex-shrink: 0;
 }
 
 .toggles {
   display: flex;
   align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+  gap: 5px;
+  flex-wrap: nowrap;
 }
 
 .toggleBtn {
-  padding: 4px 10px;
-  font-size: 12px;
+  padding: 3px 8px;
+  font-size: 11px;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid var(--border-default);
-  background: transparent;
+  background-color: transparent;
   color: var(--text-muted);
   cursor: pointer;
   white-space: nowrap;
@@ -86,7 +90,14 @@
 }
 
 .toggleBtn:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.toggleActiveBinance {
+  background-color: var(--accent-binance-bg);
+  border-color: rgba(240, 185, 11, 0.55);
+  color: var(--accent-binance-hover);
 }
 
 .toggleActiveSky {
@@ -97,20 +108,20 @@
 
 .toggleActivePurple {
   background-color: var(--bg-control-active);
-  border-color: rgba(168, 85, 247, 0.55);
+  border-color: rgba(192, 132, 252, 0.55);
   color: #d8b4fe;
 }
 
 .toggleActiveViolet {
   background-color: var(--bg-control-active);
-  border-color: rgba(139, 92, 246, 0.55);
+  border-color: rgba(167, 139, 250, 0.55);
   color: #c4b5fd;
 }
 
 .toggleActiveAmber {
-  background-color: var(--bg-control-active);
-  border-color: rgba(245, 158, 11, 0.55);
-  color: #fcd34d;
+  background-color: var(--accent-binance-bg);
+  border-color: rgba(240, 185, 11, 0.55);
+  color: var(--accent-binance-hover);
 }
 
 /* Split EMA button & anchored popover */
@@ -118,12 +129,13 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .emaSplit {
   display: inline-flex;
   align-items: stretch;
-  border-radius: 6px;
+  border-radius: 5px;
   border: 1px solid var(--border-default);
   overflow: hidden;
   transition: border-color 140ms ease, background-color 140ms ease;
@@ -135,8 +147,8 @@
 }
 
 .emaMainBtn {
-  padding: 4px 8px 4px 10px;
-  font-size: 12px;
+  padding: 3px 7px 3px 8px;
+  font-size: 11px;
   font-weight: 500;
   border: none;
   background: transparent;
@@ -153,7 +165,7 @@
 }
 
 .emaMainBtn:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .emaDots {
@@ -163,14 +175,13 @@
 }
 
 .emaDot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
 }
 
 .emaGearBtn {
-  padding: 4px 7px;
-  font-size: 11px;
+  padding: 3px 6px;
   border: none;
   border-left: 1px solid var(--border-default);
   background: transparent;
@@ -185,7 +196,7 @@
 .emaGearBtn:hover,
 .emaGearBtnOpen {
   background-color: var(--bg-control-hover);
-  color: var(--text-primary);
+  color: var(--accent-binance);
 }
 
 .emaPopover {
@@ -193,11 +204,11 @@
   top: calc(100% + 8px);
   left: 0;
   width: 304px;
-  background-color: var(--bg-elevated);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border-strong);
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65);
   z-index: 60;
 }
 
@@ -234,8 +245,8 @@
 }
 
 .presetBtn:hover {
-  border-color: var(--accent-sky);
-  color: var(--text-primary);
+  border-color: var(--accent-binance);
+  color: var(--accent-binance);
 }
 
 .emaRows {
@@ -258,7 +269,7 @@
 .emaCheck {
   width: 14px;
   height: 14px;
-  accent-color: var(--accent-sky-btn);
+  accent-color: var(--accent-binance);
   cursor: pointer;
   margin: 0;
 }
@@ -307,7 +318,7 @@
 }
 
 .periodInput:focus {
-  border-color: var(--accent-sky);
+  border-color: var(--accent-binance);
 }
 
 .popoverNote {
@@ -320,42 +331,72 @@
 .rightGroup {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
+  flex-shrink: 0;
 }
 
 .backfillStatus {
   font-size: 11px;
   font-family: var(--font-mono);
-  color: #7dd3fc;
+  color: var(--accent-binance);
   white-space: nowrap;
 }
 
 .streamBtn {
-  padding: 4px 12px;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: 6px;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  border-radius: 5px;
   border: 1px solid var(--border-default);
   background: transparent;
   color: var(--text-muted);
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
 }
 
 .streamBtn:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.streamDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--text-dim);
+  flex-shrink: 0;
 }
 
 .streamConnected {
-  background-color: rgba(6, 78, 59, 0.45);
-  border-color: rgba(4, 120, 87, 0.65);
-  color: #6ee7b7;
+  background-color: var(--bull-bg);
+  border-color: rgba(14, 203, 129, 0.48);
+  color: var(--bull);
+}
+
+.streamConnected .streamDot {
+  background-color: var(--bull);
+  box-shadow: 0 0 6px var(--bull);
 }
 
 .streamConnecting {
-  background-color: rgba(69, 26, 3, 0.35);
-  border-color: rgba(180, 83, 9, 0.55);
-  color: #fcd34d;
+  background-color: var(--accent-binance-bg);
+  border-color: rgba(240, 185, 11, 0.48);
+  color: var(--accent-binance-hover);
+}
+
+.streamConnecting .streamDot {
+  background-color: var(--accent-binance);
+}
+
+@media (max-width: 1020px) {
+  .toolbar,
+  .group,
+  .toggles {
+    flex-wrap: wrap;
+  }
 }

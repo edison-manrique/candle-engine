@@ -22,19 +22,19 @@ export interface ChartThemeColors {
 }
 
 export const TERMINAL_THEME: ChartThemeColors = {
-  bg: "#090D14",
-  gridLine: "rgba(148, 163, 184, 0.09)",
-  axisText: "#7C8BA1",
-  bull: "#10B981",
-  bear: "#EF4444",
-  bullVol: "rgba(16, 185, 129, 0.28)",
-  bearVol: "rgba(239, 68, 68, 0.28)",
-  bbLine: "rgba(168, 85, 247, 0.65)",
+  bg: "#0B0E11",
+  gridLine: "rgba(43, 49, 57, 0.65)",
+  axisText: "#848E9C",
+  bull: "#0ECB81",
+  bear: "#F6465D",
+  bullVol: "rgba(14, 203, 129, 0.25)",
+  bearVol: "rgba(246, 70, 93, 0.25)",
+  bbLine: "rgba(168, 85, 247, 0.68)",
   bbFill: "rgba(168, 85, 247, 0.06)",
-  rsiLine: "#A78BFA",
-  crosshair: "rgba(203, 213, 225, 0.38)",
-  priceTagBg: "#1E293B",
-  priceTagText: "#F8FAFC",
+  rsiLine: "#F0B90B",
+  crosshair: "rgba(234, 236, 239, 0.36)",
+  priceTagBg: "#2B3139",
+  priceTagText: "#EAECEF",
 };
 
 const NF_PRICE_2 = new Intl.NumberFormat("en-US", {

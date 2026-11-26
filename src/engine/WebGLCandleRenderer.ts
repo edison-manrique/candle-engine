@@ -35,12 +35,12 @@ void main() {
 }
 `;
 
-const BULL_VOL: readonly [number, number, number, number] = [0.063, 0.725, 0.506, 0.28];
-const BEAR_VOL: readonly [number, number, number, number] = [0.937, 0.267, 0.267, 0.28];
-const BULL_WICK: readonly [number, number, number, number] = [0.063, 0.725, 0.506, 0.92];
-const BEAR_WICK: readonly [number, number, number, number] = [0.937, 0.267, 0.267, 0.92];
-const BULL_BODY: readonly [number, number, number, number] = [0.063, 0.725, 0.506, 1.0];
-const BEAR_BODY: readonly [number, number, number, number] = [0.937, 0.267, 0.267, 1.0];
+const BULL_VOL: readonly [number, number, number, number] = [0.055, 0.796, 0.506, 0.25];
+const BEAR_VOL: readonly [number, number, number, number] = [0.965, 0.275, 0.365, 0.25];
+const BULL_WICK: readonly [number, number, number, number] = [0.055, 0.796, 0.506, 0.94];
+const BEAR_WICK: readonly [number, number, number, number] = [0.965, 0.275, 0.365, 0.94];
+const BULL_BODY: readonly [number, number, number, number] = [0.055, 0.796, 0.506, 1.0];
+const BEAR_BODY: readonly [number, number, number, number] = [0.965, 0.275, 0.365, 1.0];
 
 function compileShader(gl: WebGL2RenderingContext, type: number, src: string): WebGLShader {
   const shader = gl.createShader(type);
@@ -144,7 +144,7 @@ export class WebGLCandleRenderer {
     gl.disable(gl.DEPTH_TEST);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-    gl.clearColor(0.035, 0.051, 0.078, 1.0); // #090D14
+    gl.clearColor(0.043, 0.055, 0.067, 1.0); // #0B0E11
   }
 
   private drawInstancedBatch(

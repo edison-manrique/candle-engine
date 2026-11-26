@@ -10,11 +10,11 @@ interface TopBarProps {
   onResetView: () => void;
 }
 
-const PAIRS: { id: CryptoPair; label: string }[] = [
-  { id: "BTCUSDT", label: "BTC/USDT" },
-  { id: "ETHUSDT", label: "ETH/USDT" },
-  { id: "SOLUSDT", label: "SOL/USDT" },
-  { id: "BNBUSDT", label: "BNB/USDT" },
+const PAIRS: { id: CryptoPair; base: string; quote: string }[] = [
+  { id: "BTCUSDT", base: "BTC", quote: "USDT" },
+  { id: "ETHUSDT", base: "ETH", quote: "USDT" },
+  { id: "SOLUSDT", base: "SOL", quote: "USDT" },
+  { id: "BNBUSDT", base: "BNB", quote: "USDT" },
 ];
 
 export function TopBar(props: TopBarProps) {
@@ -28,10 +28,42 @@ export function TopBar(props: TopBarProps) {
         }}
         class={styles.brand}
       >
-        candle-engine
+        <svg
+          class={styles.brandMark}
+          width="22"
+          height="22"
+          viewBox="0 0 64 64"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect width="64" height="64" rx="14" fill="#0B0E11" />
+          <rect
+            x="2"
+            y="2"
+            width="60"
+            height="60"
+            rx="12"
+            stroke="#2B3139"
+            stroke-width="2"
+          />
+          <line x1="18" y1="18" x2="18" y2="48" stroke="#F6465D" stroke-width="2.5" stroke-linecap="round" />
+          <rect x="13" y="25" width="10" height="15" rx="2" fill="#F6465D" />
+          <line x1="32" y1="12" x2="32" y2="45" stroke="#0ECB81" stroke-width="2.5" stroke-linecap="round" />
+          <rect x="27" y="18" width="10" height="19" rx="2" fill="#0ECB81" />
+          <line x1="46" y1="14" x2="46" y2="41" stroke="#0ECB81" stroke-width="2.5" stroke-linecap="round" />
+          <rect x="41" y="19" width="10" height="14" rx="2" fill="#0ECB81" />
+          <path
+            d="M11 46 C22 43, 30 33, 53 20"
+            stroke="#F0B90B"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+        <span class={styles.brandName}>candle-engine</span>
+        <span class={styles.brandBadge}>WASM SIMD</span>
       </a>
 
-      <nav class={styles.nav} aria-label="Crypto pairs">
+      <nav class={styles.nav} aria-label="Pares crypto">
         <For each={PAIRS}>
           {(item) => {
             const isActive = () => props.activePair === item.id;
@@ -43,7 +75,10 @@ export function TopBar(props: TopBarProps) {
                 class={styles.pairBtn}
                 classList={{ [styles.pairBtnActive]: isActive() }}
               >
-                <span>{item.label}</span>
+                <span class={styles.pairLabel}>
+                  <span class={styles.pairBase}>{item.base}</span>
+                  <span class={styles.pairQuote}>/{item.quote}</span>
+                </span>
                 <Show when={t()}>
                   {(ticker) => (
                     <span

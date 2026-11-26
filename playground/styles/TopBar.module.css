@@ -1,38 +1,69 @@
 .header {
-  height: 52px;
-  padding: 0 20px;
+  height: 46px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 16px;
   border-bottom: 1px solid var(--border-default);
   background-color: var(--bg-surface);
   flex-shrink: 0;
 }
 
 .brand {
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
+.brandMark {
+  display: block;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.brandBadge {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--accent-binance);
+  background-color: var(--accent-binance-bg);
+  border: 1px solid rgba(240, 185, 11, 0.28);
+}
+
 .nav {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  align-items: stretch;
+  gap: 18px;
+  height: 100%;
+  min-width: 0;
   overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
 }
 
 .pairBtn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 0;
-  font-size: 13px;
+  gap: 7px;
+  padding: 0 2px;
+  font-size: 12px;
   font-weight: 500;
   background: transparent;
   border: none;
@@ -45,23 +76,39 @@
 }
 
 .pairBtn:hover {
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .pairBtn:focus-visible {
-  outline: 2px solid var(--accent-sky);
-  outline-offset: 2px;
+  outline: 2px solid var(--accent-binance);
+  outline-offset: -2px;
 }
 
 .pairBtnActive {
   color: var(--text-primary);
-  border-bottom-color: var(--accent-sky);
+  border-bottom-color: var(--accent-binance);
+}
+
+.pairLabel {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.pairBase {
+  font-weight: 600;
+  color: inherit;
+}
+
+.pairQuote {
+  font-size: 11px;
+  color: var(--text-dim);
 }
 
 .pairPrice {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: 11px;
+  font-weight: 500;
 }
 
 .bull {
@@ -79,13 +126,13 @@
 }
 
 .resetBtn {
-  padding: 6px 16px;
+  padding: 5px 12px;
   font-size: 12px;
   font-weight: 600;
   border: none;
   border-radius: 6px;
-  background-color: var(--accent-sky-btn);
-  color: #020617;
+  background-color: var(--accent-binance);
+  color: #0b0e11;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
@@ -93,10 +140,16 @@
 }
 
 .resetBtn:hover {
-  background-color: var(--accent-sky-btn-hover);
+  background-color: var(--accent-binance-hover);
 }
 
 .resetBtn:focus-visible {
-  outline: 2px solid #7dd3fc;
+  outline: 2px solid var(--accent-binance-hover);
   outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .brandBadge {
+    display: none;
+  }
 }

@@ -68,7 +68,7 @@
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-size: 11px;
-  color: var(--accent-sky);
+  color: var(--accent-binance);
 }
 
 .spreadMeta {
@@ -190,7 +190,7 @@
 }
 
 .tradeRow:hover {
-  background-color: rgba(15, 23, 42, 0.7);
+  background-color: var(--bg-control);
 }
 
 .askPrice {

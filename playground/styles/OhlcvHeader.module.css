@@ -1,8 +1,8 @@
 .bar {
-  height: 34px;
-  min-height: 34px;
-  max-height: 34px;
-  padding: 0 20px;
+  height: 32px;
+  min-height: 32px;
+  max-height: 32px;
+  padding: 0 16px;
   border-bottom: 1px solid var(--border-subtle);
   background-color: var(--bg-canvas);
   display: flex;
@@ -73,8 +73,8 @@
 
 .pattern {
   font-family: var(--font-sans);
-  font-weight: 500;
-  color: #fcd34d;
+  font-weight: 600;
+  color: var(--accent-binance);
   flex-shrink: 0;
 }
 
